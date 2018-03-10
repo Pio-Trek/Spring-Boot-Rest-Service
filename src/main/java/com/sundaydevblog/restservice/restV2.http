@@ -1,0 +1,89 @@
+### Get a list of movies
+
+GET http://localhost:8080/api/v2/movies
+Content-Type: application/json
+
+### Get a list of movies and reviews
+
+GET http://localhost:8080/api/v2/movies/reviews
+Content-Type: application/json
+
+### Get a list movies with given title (ignore case)
+
+GET http://localhost:8080/api/v2/movies?search=ame
+Content-Type: application/json
+
+### Get a list of movies released in the given year
+
+GET http://localhost:8080/api/v2/movies?year=1984
+Content-Type: application/json
+
+### Get a list of movies released in the grater than or equal given year
+
+GET http://localhost:8080/api/v2/movies?year>=1992
+Content-Type: application/json
+
+### Get a list of movies released in the less than or equal given year
+
+GET http://localhost:8080/api/v2/movies?year<=1992
+Content-Type: application/json
+
+### Get one movie
+
+GET http://localhost:8080/api/v2/movies/1
+Content-Type: application/json
+
+### Add a new movie
+
+POST http://localhost:8080/api/v2/movies/
+Content-Type: application/json
+
+{
+    "title": "Terminator",
+    "year": 1984
+}
+
+### Add a new review to the movie
+
+POST http://localhost:8080/api/v2/movies/2/reviews
+Content-Type: application/json
+
+{
+    "comment" : "Test comment 123!"
+}
+
+### Update movie
+
+PUT http://localhost:8080/api/v2/movies/3
+Content-Type: application/json
+
+{
+    "title": "Game Plan, The (updated)",
+    "year": 1996
+}
+
+### Update review
+
+PUT http://localhost:8080/api/v2/movies/1/reviews/2
+Content-Type: application/json
+
+{
+    "comment": "Updated review."
+}
+
+### Delte movie
+
+DELETE http://localhost:8080/api/v2/movies/1
+Content-Type: application/json
+
+### Delete review
+
+DELETE http://localhost:8080/api/v2/movies/1/reviews/1
+Content-Type: application/json
+
+### Return the number of movies in the database
+
+GET http://localhost:8080/api/v2/movies/count
+Content-Type: application/json
+
+###

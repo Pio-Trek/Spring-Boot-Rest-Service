@@ -1,23 +1,40 @@
-# Spring Boot RESTful Web Service (v1)
+# Spring Boot RESTful Web Service (v2)
 
 ![Spring Boot RESTful logo](https://github.com/Pio-Trek/Spring-Boot-Rest-Service/blob/master/logo.png)
 
 This is a Spring Boot Maven demo app showing how to build a simple RESTful Web Service connected with H2 database and basic validation.
 
-| HTTP method | CRUD | URI |Description |
-| --- | --- | --- | --- |
-| POST | Create | `/api/v1/movies` | Create a new movie |
-| POST | Create | `/api/v1/movies/(movie_id)/reviews` | Create a review to the movie |
-| GET | Read | `/api/v1/movies` | Return a list of movies with reviews |
-| GET | Read | `/api/v1/movies/(movie_id)` | Return a specific movie with reviews |
-| PUT | Update/Replace | `/api/v1/movies/(movie_id)` | Update movie |
-| PUT | Update/Replace | `/api/v1/movies/(movie_id)/reviews/(review_id)` | Update review of the movie |
-| DELETE | Delete | `/api/v1/movies/(movie_id)` | Remove movie |
-| DELETE | Delete | `/api/v1/movies/(movie_id)/reviews/(review_id)` | Remove movie review |
+Version 2 contains:
+- customise JSON output with Jackson
+- JPA query methods
+- use of Java Persistence Query Language
+- use of native SQL in the JPA
+                  
+
+| HTTP method | URI |Description |
+| --- | --- | --- |
+| POST | `/api/v2/movies` | Create a new movie |
+| POST | `/api/v2/movies/(movie_id)/reviews` | Create a review to the movie |
+| GET | `/api/v2/movies` | Return a list of movies |
+| GET | `/api/v2/movies/reviews` | Return a list of movies with reviews |
+| GET | `/api/v2/movies/(movie_id)` | Return a specific movie with reviews |
+| GET | `/api/v2/movies?search=(title)` | Return a list movies with given title (ignore case) |
+| GET | `/api/v2/movies?year=(year)` | Return a list of movies released in the given year |
+| GET | `/api/v2/movies?year>=(year)` | Return a list of movies released in the grater than or equal given year |
+| GET | `/api/v2/movies?year<=(year)` | Return a list of movies released in the less than or equal given year |
+| GET | `/api/v2/movies/count` | Return the number of movies in the database |
+| PUT | `/api/v2/movies/(movie_id)` | Update movie |
+| PUT | `/api/v2/movies/(movie_id)/reviews/(review_id)` | Update review of the movie |
+| DELETE | `/api/v2/movies/(movie_id)` | Remove movie |
+| DELETE | `/api/v2/movies/(movie_id)/reviews/(review_id)` | Remove movie review |
 
 
 For more information check my blog:
 
+(Version 2)
+http://sundaydevblog.com/custom-json-serializer-with-jackson-jpa-methods-jpql-and-native-sql-calls
+
+(Version 1)
 http://sundaydevblog.com/blog/post/build-a-basic-spring-boot-restful-web-service
 
 ## Pre-requisites

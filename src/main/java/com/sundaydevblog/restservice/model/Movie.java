@@ -21,6 +21,7 @@ public class Movie {
     @NotNull
     private Integer year;
 
+    //@JsonIgnore
     @OneToMany(
             mappedBy = "movie",
             cascade = CascadeType.ALL)
