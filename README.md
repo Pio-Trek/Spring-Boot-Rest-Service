@@ -29,14 +29,6 @@ Version 2 contains:
 | DELETE | `/api/v2/movies/(movie_id)/reviews/(review_id)` | Remove movie review |
 
 
-For more information check my blog:
-
-(Version 2)
-http://sundaydevblog.com/custom-json-serializer-with-jackson-jpa-methods-jpql-and-native-sql-calls
-
-(Version 1)
-http://sundaydevblog.com/blog/post/build-a-basic-spring-boot-restful-web-service
-
 ## Pre-requisites
 
 - Java SE Development Kit 8
